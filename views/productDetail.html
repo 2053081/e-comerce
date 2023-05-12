@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Product Detail</title>
+
+	<link rel="shortcut icon" href="../images/HCMUT_Logo.ico" type="image/x-icon" />
+	<!-- CSS only -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&family=Inter:wght@100;300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../css/styles.css" />
+	<link rel="stylesheet" href="../css/productDetail.css" />
+	<script src="https://kit.fontawesome.com/1c066e88f1.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div class="nav__bar">
+		<div class="nav-location">
+			<select name="Location" id="location-select" autofocus>
+				<option value="">--Location--</option>
+				<option value="haiphong">Hải Phòng</option>
+				<option value="hanoi">Hà Nội</option>
+				<option value="danang">Đà Nẵng</option>
+				<option value="cantho">Cần Thơ</option>
+				<option value="hcm">Hồ Chí Minh</option>
+			</select>
+		</div>
+		<div class="nav-search">
+			<i class="fa-solid fa-magnifying-glass"></i>
+			<input type="text" placeholder="Search...">
+		</div>
+		<div class="nav-cart-user">
+			<div class="nav-cart" id="cart-btn">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<p class="p-cart">Cart</p>
+			</div>
+			<div class="nav-notification">
+				<i class="fa-regular fa-bell"></i>
+			</div>
+			<div class="nav-user"></div>
+		</div>
+		<div class="nav-login-user">
+			<a href="../views/login.html">
+				<button type="button" class="button">Sign in</button>
+			</a>
+			<a href="../views/login.html">
+				<button type="button" class="button">Sign up</button>
+			</a>
+		</div>
+	</div>
+
+	<main>
+		<div class="container">
+			<div class="product-detail">
+				<div class="row h-100">
+					<div class="col-6 h-100">
+						<div class="product-img h-100">
+							<img class="product-img--active" src="https://upload.wikimedia.org/wikipedia/commons/8/83/French_Fries.JPG"
+								alt="french-fries" />
+						</div>
+					</div>
+					<div class="col-6 h-100">
+						<div class="product-info d-flex flex-column h-100">
+							<h1>French Fries</h1>
+							<small>With chilli sauce</small>
+							<p class="product-desc">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+								do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco
+								laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+								irure dolor in reprehenderit in voluptate velit esse cillum
+								dolore eu fugiat nulla pariatur.
+							</p>
+
+							<div class="product-info__tags d-flex gap-2 align-items-center">
+								<div class="product-tag">Best seller</div>
+								<div class="product-tag">Fast food</div>
+							</div>
+
+							<div class="product-info__control mt-auto">
+								<div class="product-price">
+									<p class="m-0">Price</p>
+									<span>$ 4.00</span>
+								</div>
+								<div class="product-quantity">
+									<p class="m-0">Quantity</p>
+									<span>
+										<input type="number" name="quantity" id="quantity" />
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="product-img__controls">
+				<div class="row w-100 justify-content-evenly align-items-center">
+					<div class="col-6 d-flex justify-content-center gap-4">
+						<div class="product-img__indicators">
+							<img src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg" alt="ff-1" />
+						</div>
+						<div class="product-img__indicators">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5D3SSiR05U5PvWeQmOj5VMpErmhQCGU9dbQ&usqp=CAU" alt="ff-2" />
+						</div>
+						<div class="product-img__indicators">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdFUUZFMgxFV8R7mR0CuXs7E6A_-1ogbjBKQ&usqp=CAU" alt="ff-3" />
+						</div>
+					</div>
+
+					<div class="col-6 text-center h-100">
+						<div class="product-button h-100">
+							<button class="w-100">Add to cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="divider">
+				<div class="divider-title">Customer Reviews</div>
+			</div>
+
+			<div class="product-reviews">
+				<div class="product-reviews__content d-flex flex-wrap justify-content-between">
+					<div class="review">
+						<div class="review-author">
+							<img src="https://www.w3schools.com/howto/img_avatar.png" alt="author" />
+						</div>
+
+						<div class="review-content">
+							<div class="author-name">
+								Ken Nguyen
+								<span>10:50 AM</span>
+							</div>
+
+							<div class="review-title">
+								Nulla aute nisi quis nostrud reprehenderit nisi cillum mollit anim amet duis non esse.
+							</div>
+
+							<div class="review-desc">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid recusandae tempora fugiat perferendis praesentium, eum,
+								eius
+							</div>
+
+							<div class="review-controls d-flex gap-3 align-items-center">
+								<div>
+									<i class="fa-solid fa-thumbs-up"></i> <span>3</span>
+								</div>
+								<div>
+									<i class="fa-solid fa-comment"></i><span>20</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="review">
+						<div class="review-author">
+							<img src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=2000" alt="author" />
+						</div>
+
+						<div class="review-content">
+							<div class="author-name">
+								Ken Nguyen
+								<span>10:50 AM</span>
+							</div>
+
+							<div class="review-title">
+								Nulla aute nisi quis nostrud reprehenderit nisi cillum mollit anim amet duis non esse.
+							</div>
+
+							<div class="review-desc">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid recusandae tempora fugiat perferendis praesentium, eum,
+								eius
+							</div>
+
+							<div class="review-controls d-flex gap-3 align-items-center">
+								<div>
+									<i class="fa-solid fa-thumbs-up"></i> <span>3</span>
+								</div>
+								<div>
+									<i class="fa-solid fa-comment"></i><span>20</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="product-reviews__pagination d-flex justify-content-center mt-5">
+					<nav class="text-center" aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+								</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50" style="min-width: 1500px;">
+		<div class="container">
+			<div class="foot1">
+				<ul class="foot-ul">
+					<li class="foot-list center">
+						<img src="../images/BK-logo.png" alt="logo.png" class="logo" id="logo">
+					</li>
+					<li class="foot-list center">
+						<ul class="list-group list-group-horizontal">
+							<li class="list-group-item list-main list-not-border">Product</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Features</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Pricing</a>
+							</li>
+						</ul>
+						<ul class="list-group list-group-horizontal-sm">
+							<li class="list-group-item list-main list-not-border">Resources</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Blog</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">User guides</a>
+							</li>
+						</ul>
+						<ul class="list-group list-group-horizontal-md">
+							<li class="list-group-item list-main list-not-border">Company</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">About</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Join us</a>
+							</li>
+						</ul>
+					</li>
+					<li class="foot-list center">
+						<div class="subcribe">
+							<div class="sub-heading">Subcribe to our newsletter</div>
+							<div class="sub-text">For product announcements and exclusive insights</div>
+							<div class="input-group flex-nowrap">
+								<span class="input-group-text" id="addon-wrapping"><i class="gg-mail"></i></span>
+								<input type="mail" class="form-control" placeholder="Input your email" aria-label="Username"
+									aria-describedby="addon-wrapping">
+							</div>
+							<ul class="foot-ul">
+								<li class="foot-list">
+									<a href="#"><i class="gg-facebook icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-twitter icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-youtube icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-instagram icons"></i></a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+				</ul>
+			</div>
+			<div class="foot2">
+				<ul class="foot-ul">
+					<li class="foot-list">
+						<small>&copy; 2022 Brand, Inc</small>
+					</li>
+					<li class="foot-list">
+						<a href="#">Privacy</a>
+					</li>
+					<li class="foot-list">
+						<a href="#">Terms</a>
+					</li>
+					<li class="foot-list">
+						<a href="#">Sitemap</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="../js/controllers/index.js" type="module"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Login</title>
+
+	<link rel="shortcut icon" href="../images/HCMUT_Logo.ico" type="image/x-icon" />
+	<!-- CSS only -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&family=Inter:wght@100;300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../css/styles.css" />
+	<script src="https://kit.fontawesome.com/1c066e88f1.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+	<!-- LOGIN CSS only -->
+	<link rel="stylesheet" href="../css/login.css" />
+
+</head>
+
+<body>
+
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+	<main class="d-flex">
+		<div class="imageContainer h-100 w-50">
+			<img class="image" src="../images/Food-central.jpg" alt="Food image"></img>
+		</div>
+
+		<div class="loginContainer h-100 w-50">
+			<form action="#" id="form-login" class="d-flex flex-column gap-4">
+				<h1>Welcome</h1>
+
+				<div class="textbox">
+					<p><label>Email:</label></p>
+					<input placeholder="example.email@gmail.com" type="text" id="email-login" />
+				</div>
+
+				<div class="textbox">
+					<p><label>Password:</label></p>
+					<input placeholder="Enter at least 8+ characters" type="password" id="password-login" />
+				</div>
+
+				<div class="buttonContainer">
+					<button type="submit" class="button mb-4">Sign in</button>
+					<button type="button" class="button">Sign up with Facebook</button>
+				</div>
+
+				<div class="accountManagment">
+					<p a href="">Forget your Password?</p>
+					<p>Don't have an account? <a href="https://www.w3schools.com/">Sign up</a></p>
+				</div>
+			</form>
+		</div>
+	</main>
+
+	<script src="../js/controllers/login.js" type="module"></script>
+</body>
+
+</html>

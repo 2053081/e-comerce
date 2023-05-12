@@ -1,0 +1,344 @@
+/* import constants từ file constants.css để sử dụng: var(--{tên biến}) */
+@import "./constants.css";
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.nav__bar {
+  background-color: white;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: var(--shadow-s);
+}
+
+#location-select {
+  background-color: white;
+  border: 1px solid var(--neutral-500);
+  border-radius: 2px;
+  color: var(--neutral-900);
+  padding: 4px;
+  margin: 1px 0 0 12px;
+  font-size: 14px;
+}
+
+#location-select:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid var(--neutral-500);
+}
+
+#location-select:focus {
+  background-color: white;
+  border: 1px solid var(--neutral-500);
+  outline: 0;
+}
+
+.nav-search {
+  background-color: var(--neutral-200);
+  cursor: none;
+  width: 800px;
+}
+
+.nav-search input {
+  border: 0px;
+  background-color: var(--neutral-200);
+  padding: 4px 4px;
+}
+
+.nav-search input:focus {
+  outline: 0px;
+}
+
+.nav-search i {
+  color: var(--neutral-900);
+  padding: 0px 8px;
+  font-size: 14px;
+}
+
+.nav-search input::placeholder {
+  color: var(--neutral-500);
+}
+
+.nav-cart-user {
+  width: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-cart {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.nav-cart i {
+  padding: 5px 12px 0px 0;
+}
+
+.nav-cart p {
+  margin: 0;
+}
+
+.nav-login-user button {
+  height: 40px;
+  width: auto;
+  margin: 5px;
+  padding: 0 10px;
+  color: #ffffffff; /* white */
+  background: #00bdd6ff; /* primary-500 */
+  opacity: 1;
+  border: none;
+  border-radius: 8px; /* border-xl */
+}
+
+/* Hover */
+.nav-login-user button:hover {
+  color: #ffffffff; /* white */
+  background: #00a9c0ff; /* primary-550 */
+}
+/* Pressed */
+.nav-login-user button:hover:active {
+  color: #ffffffff; /* white */
+  background: #0095a9ff; /* primary-600 */
+}
+/* Disabled */
+.nav-login-user button:disabled {
+  opacity: 0.4;
+}
+
+#slider {
+  /* margin-top: 46.5px; */
+  height: 600px;
+  background: url("https://smallbiztrends.com/ezoimgfmt/media.smallbiztrends.com/2021/05/fast-food-restaurants-850x476.png?ezimgfmt=rs:840x470/rscb12/ngcb12/notWebP")
+    top center / cover no-repeat;
+  position: relative;
+  top: 0;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+#slider .text-heading {
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 24px;
+}
+#slider .text-description {
+  padding-top: 15px;
+}
+
+.collection {
+  margin-top: 100px;
+}
+
+.collection-upper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.collection-upper .upper-header {
+  font-weight: 600;
+}
+
+.collection-upper .upper-header,
+.collection-upper .btn-seemore {
+  display: inline-block;
+  margin: 0 64px;
+}
+
+.collection-upper .btn-seemore {
+  color: var(--neutral-500);
+}
+
+.collection-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.collection-item {
+  width: 17%;
+  /* text-align: center; */
+  border: 1px solid var(--neutral-200);
+  background-color: var(--neutral-200);
+}
+
+.collection-item a{
+  text-decoration: none;
+}
+
+.collection-item .item-upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-upper i {
+  margin-top: 20px;
+}
+
+.collection-item .item-img {
+  width: 100%;
+}
+
+.collection-item .item-desc p {
+  font-weight: 600;
+  margin-top: 8px;
+  font-size: 14px;
+  padding-left: 8px;
+  color: black;
+}
+
+.collection-item .item-desc .item-name {
+  padding-top: 8px;
+}
+
+.collection-item .item-desc .item-price {
+  color: var(--primary-500);
+}
+
+.heart-btn {
+  padding-right: 8px;
+  border: 0px;
+  outline: 0px;
+  cursor: context-menu !important;
+  height: 100%;
+}
+
+.item-heart {
+  height: 100%;
+  color: var(--neutral-500);
+}
+
+.red {
+  color: red;
+}
+
+.item-heart:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.feedback-body {
+  margin-top: 150px;
+  margin-left: 250px;
+  display: flex;
+  height: 322px;
+  width: auto;
+}
+
+.box-left {
+  border-width: 2px;
+  border-style: solid;
+  border-color: gray;
+  background-color: whitesmoke;
+  text-align: center;
+  height: 312px;
+  width: 40%;
+}
+.box-left h2 {
+  margin-top: 50px;
+  color: lightslategray;
+  font-size: 50px;
+}
+
+.box-left button {
+  margin-top: 50px;
+  color: #fff;
+  background-color: lightseagreen;
+  border: none;
+  padding: 10px;
+}
+.box-right {
+  background-image: url(/images/feedback.jpg);
+  width: 50%;
+  background-repeat: no-repeat;
+  height: auto;
+}
+.combo {
+  margin-top: 100px;
+  /* border-width: 3px;
+    border-style: solid; */
+}
+.combo .title-combo h2 {
+  text-align: center;
+}
+.combo .title-combo .combo-content {
+  margin-top: 10px;
+  text-align: center;
+  color: gray;
+  font-style: italic;
+  font-size: larger;
+}
+
+#sticky-footer {
+  background-color: #fff !important;
+  box-shadow: var(--shadow-m);
+}
+.text-center {
+  color: #000;
+}
+.foot1 {
+  margin-bottom: 20px;
+}
+.foot2 {
+  text-align: center;
+}
+.subcribe {
+  text-align: center;
+  position: inherit;
+}
+li.list-group-item.list-not-border {
+  border: none !important;
+}
+li.list-not-border {
+  border: none !important;
+}
+.list-main {
+  font-weight: bold;
+}
+.sub-heading {
+  font-size: 32px;
+  line-height: 48px;
+  color: #00bdd6ff;
+}
+.sub-text {
+  margin-bottom: 10px;
+  color: #000;
+}
+.list-items {
+  text-decoration: none;
+  color: #000;
+}
+.foot-ul {
+  display: inline-block;
+}
+.foot-list {
+  display: inline-block;
+  color: #000;
+}
+.center {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  margin: 0 50px;
+}
+.logo {
+  padding-bottom: 90px;
+}
+.icons {
+  margin: 20px 5px 0px 5px;
+}

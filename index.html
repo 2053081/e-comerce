@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homepage</title>
+
+	<link rel="shortcut icon" href="./images/HCMUT_Logo.ico" type="image/x-icon">
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://kit.fontawesome.com/1c066e88f1.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+	<div class="nav__bar">
+		<div class="nav-location">
+			<select name="Location" id="location-select" autofocus>
+				<option value="">--Location--</option>
+				<option value="haiphong">Hải Phòng</option>
+				<option value="hanoi">Hà Nội</option>
+				<option value="danang">Đà Nẵng</option>
+				<option value="cantho">Cần Thơ</option>
+				<option value="hcm">Hồ Chí Minh</option>
+			</select>
+		</div>
+		<div class="nav-search">
+			<i class="fa-solid fa-magnifying-glass"></i>
+			<input type="text" placeholder="Search...">
+		</div>
+		<div class="nav-cart-user">
+			<div class="nav-cart" id="cart-btn">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<p class="p-cart">Cart</p>
+			</div>
+			<div class="nav-notification">
+				<i class="fa-regular fa-bell"></i>
+			</div>
+			<div class="nav-user"></div>
+		</div>
+		<div class="nav-login-user">
+			<a href="../views/login.html">
+				<button type="button" class="button">Sign in</button>
+			</a>
+			<a href="../views/login.html">
+				<button type="button" class="button">Sign up</button>
+			</a>
+		</div>
+	</div>
+
+	<main class="pb-5">
+		<div id="slider">
+			<div class="text-content">
+				<div class="text-heading">
+					Đồ án Restaurant
+				</div>
+				<div class="text-description">
+					This is the best restaurant in BK Area.
+				</div>
+			</div>
+		</div>
+
+		<div class="collection chicken">
+		</div>
+
+		<div class="collection chicken">
+		</div>
+
+		<div class="feedback-body">
+			<div class="box-left">
+				<h2>
+					<span>Feedback</span>
+					<img id="feedback-icon" src="/images/icon-feedback.png" style="width: 50	px; height: 50px;"></img>
+				</h2>
+				<p>
+					<span>We'd love to hear your feedback here</span>
+				</p>
+				<button class="feedback-button">
+					Feedback now
+				</button>
+			</div>
+			<div class="box-right"></div>
+		</div>
+
+		<div class="combo">
+			<div class="title-combo">
+				<h2>
+					<span>YOU MAY LIKE THIS</span>
+				</h2>
+				<div class="combo-content">
+					<span>Find your awesome combo here!</span>
+				</div>
+			</div>
+
+			<div class="collection combo">
+				<div class="collection-upper" style="margin-top: -50px;">
+					<h3 class="upper-header">COMBO</h3>
+					<a href="" class="btn-seemore">
+						<div class="btn-seemore">See more &#8811</div>
+					</a>
+				</div>
+				<div class="collection-items">
+					<div class="collection-item">
+						<img src="https://static.kfcvietnam.com.vn/images/items/lg/D6.jpg?v=LKworL" alt="" class="item-img">
+						<div class="item-desc">
+							<div class="item-upper">
+								<p class="item-name">
+									Combo 1
+								</p>
+								<button class="heart-btn">
+									<i class="fa-regular fa-heart item-heart"></i>
+								</button>
+							</div>
+
+							<p class="item-price">$6.87</p>
+						</div>
+					</div>
+					<div class="collection-item">
+						<img src="https://static.kfcvietnam.com.vn/images/items/lg/D7.jpg?v=LKworL" alt="" class="item-img">
+						<div class="item-desc">
+							<div class="item-upper">
+								<p class="item-name">
+									Combo 2
+								</p>
+								<button class="heart-btn">
+									<i class="fa-regular fa-heart item-heart"></i>
+								</button>
+							</div>
+							<p class="item-price">$7.47</p>
+						</div>
+					</div>
+					<div class="collection-item">
+						<img src="https://static.kfcvietnam.com.vn/images/items/lg/D8.jpg?v=LKworL" alt="" class="item-img">
+						<div class="item-desc">
+							<div class="item-upper">
+								<p class="item-name">
+									Combo 3
+								</p>
+								<button class="heart-btn">
+									<i class="fa-regular fa-heart item-heart"></i>
+								</button>
+							</div>
+							<p class="item-price">$9.54</p>
+						</div>
+					</div>
+					<div class="collection-item">
+						<img src="https://static.kfcvietnam.com.vn/images/items/lg/D8.jpg?v=LKworL" alt="" class="item-img">
+						<div class="item-desc">
+							<div class="item-upper">
+								<p class="item-name">
+									Family Combo
+								</p>
+								<button class="heart-btn">
+									<i class="fa-regular fa-heart item-heart"></i>
+								</button>
+							</div>
+							<p class="item-price">$14.93</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50" style="min-width: 1500px;">
+		<div class="container">
+			<div class="foot1">
+				<ul class="foot-ul">
+					<li class="foot-list center">
+						<img src="../images/BK-logo.png" alt="logo.png" class="logo" id="logo">
+					</li>
+					<li class="foot-list center">
+						<ul class="list-group list-group-horizontal">
+							<li class="list-group-item list-main list-not-border">Product</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Features</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Pricing</a>
+							</li>
+						</ul>
+						<ul class="list-group list-group-horizontal-sm">
+							<li class="list-group-item list-main list-not-border">Resources</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Blog</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">User guides</a>
+							</li>
+						</ul>
+						<ul class="list-group list-group-horizontal-md">
+							<li class="list-group-item list-main list-not-border">Company</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">About</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Join us</a>
+							</li>
+						</ul>
+					</li>
+					<li class="foot-list center">
+						<div class="subcribe">
+							<div class="sub-heading">Subcribe to our newsletter</div>
+							<div class="sub-text">For product announcements and exclusive insights</div>
+							<div class="input-group flex-nowrap">
+								<span class="input-group-text" id="addon-wrapping"><i class="gg-mail"></i></span>
+								<input type="mail" class="form-control" placeholder="Input your email" aria-label="Username"
+									aria-describedby="addon-wrapping">
+							</div>
+							<ul class="foot-ul">
+								<li class="foot-list">
+									<a href="#"><i class="gg-facebook icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-twitter icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-youtube icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-instagram icons"></i></a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+				</ul>
+			</div>
+			<div class="foot2">
+				<ul class="foot-ul">
+					<li class="foot-list">
+						<small>&copy; 2022 Brand, Inc</small>
+					</li>
+					<li class="foot-list">
+						<a href="#">Privacy</a>
+					</li>
+					<li class="foot-list">
+						<a href="#">Terms</a>
+					</li>
+					<li class="foot-list">
+						<a href="#">Sitemap</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="js/controllers/login.js" type="module"></script>
+	<script src="js/controllers/index.js" type="module"></script>
+	<script src="js/controllers/home.js" type="module"></script>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+	<script>
+		const likeBtn = document.querySelectorAll('.fa-heart');
+		console.log(likeBtn);
+		for (const i of likeBtn) {
+			i.addEventListener('click', function () {
+				if (i.classList[0] == 'fa-solid') {
+					i.classList.replace('fa-solid', 'fa-regular');
+					i.classList.remove('red');
+				}
+				else {
+					i.classList.replace('fa-regular', 'fa-solid');
+					i.classList.add('red');
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>

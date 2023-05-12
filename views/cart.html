@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Cart</title>
+
+	<link rel="shortcut icon" href="../images/HCMUT_Logo.ico" type="image/x-icon" />
+	<!-- Icon -->
+	<link href='https://css.gg/mail.css' rel='stylesheet'>
+	<link href='https://css.gg/facebook.css' rel='stylesheet'>
+	<link href='https://css.gg/twitter.css' rel='stylesheet'>
+	<link href='https://css.gg/youtube.css' rel='stylesheet'>
+	<link href='https://css.gg/instagram.css' rel='stylesheet'>
+	<!-- CSS only -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&family=Inter:wght@100;300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+	<link rel="stylesheet" href="../css/styles.css" />
+	<link rel="stylesheet" href="../css/cart.css">
+	<link href='https://css.gg/math-plus.css' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/1c066e88f1.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div class="nav__bar">
+		<div class="nav-location">
+			<select name="Location" id="location-select" autofocus>
+				<option value="">--Location--</option>
+				<option value="haiphong">Hải Phòng</option>
+				<option value="hanoi">Hà Nội</option>
+				<option value="danang">Đà Nẵng</option>
+				<option value="cantho">Cần Thơ</option>
+				<option value="hcm">Hồ Chí Minh</option>
+			</select>
+		</div>
+		<div class="nav-search">
+			<i class="fa-solid fa-magnifying-glass"></i>
+			<input type="text" placeholder="Search...">
+		</div>
+		<div class="nav-cart-user">
+			<div class="nav-cart" id="cart-btn">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<p class="p-cart">Cart</p>
+			</div>
+			<div class="nav-notification">
+				<i class="fa-regular fa-bell"></i>
+			</div>
+			<div class="nav-user"></div>
+		</div>
+		<div class="nav-login-user">
+			<a href="../views/login.html">
+				<button type="button" class="button">Sign in</button>
+			</a>
+			<a href="../views/login.html">
+				<button type="button" class="button">Sign up</button>
+			</a>
+		</div>
+	</div>
+	<div class="info">
+		<img class="info-pic" src="../images/user.png" alt="user.png">
+		<p class="info-word">My cart</p>
+	</div>
+	<div class="items">
+		<img src="../images/items.png" alt="item.png" class="items-pic">
+		<ul class="list-group">
+			<li class="list-group-item">Name of food</li>
+			<li class="list-group-item">
+				<p class="details-word">Quantity</p>
+				<div class="form-quan">
+					<!-- <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div> -->
+					<input type="number" id="number" value="0" />
+				</div>
+			</li>
+			<li class="list-group-item">Price</li>
+		</ul>
+		<div class="description">
+			<div class="des-word">Description</div>
+			<input type="text" class="des-input">
+		</div>
+		<div class="total">
+			<div style="font-weight: bold;">Total price:</div>
+			<div>Price</div>
+		</div>
+	</div>
+	<div class="items">
+		<img src="../images/items.png" alt="item.png" class="items-pic">
+		<ul class="list-group">
+			<li class="list-group-item">Name of food</li>
+			<li class="list-group-item">
+				<p class="details-word">Quantity</p>
+				<div class="form-quan">
+					<!-- <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div> -->
+					<input type="number" id="number" value="0" />
+				</div>
+			</li>
+			<li class="list-group-item">Price</li>
+		</ul>
+		<div class="description">
+			<div class="des-word">Description</div>
+			<input type="text" class="des-input">
+		</div>
+		<div class="total">
+			<div style="font-weight: bold;">Total price:</div>
+			<div>Price</div>
+		</div>
+	</div>
+	<div class="add-cart">
+		<button type="button" class="btn btn-primary">
+			<i class="gg-math-plus" style="display: inline-block;margin-bottom: 2px;"></i>
+		</button>
+	</div>
+	<div class="cart-footer">
+		<div class="desti">
+			<div class="des-word">Destination</div>
+			<input type="text" class="desti-input" required>
+		</div>
+		<div class="desti-total">
+			<div style="font-weight: bold;">Total price:</div>
+			<div>Price</div>
+			<div class="submit">
+				<button type="button" class="btn btn-primary">Place order</button>
+				<button type="button" class="btn btn-secondary">Cancel</button>
+			</div>
+		</div>
+	</div>
+	<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50" style="min-width: 1500px;">
+		<div class="container">
+			<div class="foot1">
+				<ul class="foot-ul">
+					<li class="foot-list center">
+						<img src="../images/BK-logo.png" alt="logo.png" class="logo" id="logo">
+					</li>
+					<li class="foot-list center">
+						<ul class="list-group list-group-horizontal">
+							<li class="list-group-item list-main list-not-border">Product</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Features</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Pricing</a>
+							</li>
+						</ul>
+						<ul class="list-group list-group-horizontal-sm">
+							<li class="list-group-item list-main list-not-border">Resources</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Blog</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">User guides</a>
+							</li>
+						</ul>
+						<ul class="list-group list-group-horizontal-md">
+							<li class="list-group-item list-main list-not-border">Company</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">About</a>
+							</li>
+							<li class="list-group-item list-not-border">
+								<a href="#" class="list-items">Join us</a>
+							</li>
+						</ul>
+					</li>
+					<li class="foot-list center">
+						<div class="subcribe">
+							<div class="sub-heading">Subcribe to our newsletter</div>
+							<div class="sub-text">For product announcements and exclusive insights</div>
+							<div class="input-group flex-nowrap">
+								<span class="input-group-text" id="addon-wrapping"><i class="gg-mail"></i></span>
+								<input type="mail" class="form-control" placeholder="Input your email" aria-label="Username"
+									aria-describedby="addon-wrapping">
+							</div>
+							<ul class="foot-ul">
+								<li class="foot-list">
+									<a href="#"><i class="gg-facebook icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-twitter icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-youtube icons"></i></a>
+								</li>
+								<li class="foot-list">
+									<a href="#"><i class="gg-instagram icons"></i></a>
+								</li>
+							</ul>
+						</div>
+
+					</li>
+				</ul>
+			</div>
+			<div class="foot2">
+				<ul class="foot-ul">
+					<li class="foot-list">
+						<small>&copy; 2022 Brand, Inc</small>
+					</li>
+					<li class="foot-list">
+						<a href="#">Privacy</a>
+					</li>
+					<li class="foot-list">
+						<a href="#">Terms</a>
+					</li>
+					<li class="foot-list">
+						<a href="#">Sitemap</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="../js/controllers/index.js" type="module"></script>
+	<script src="../js/controllers/cart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+
+</html>

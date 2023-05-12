@@ -1,0 +1,170 @@
+@import "./constants.css";
+
+main {
+  padding: 50px;
+}
+
+.product-detail {
+  padding: 20px 30px;
+  height: 380px;
+  color: var(--neutral-700);
+}
+
+.product-img {
+  width: 100%;
+}
+
+.product-img--active {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.product-info {
+}
+
+.product-info h1 {
+  font-size: 48px;
+  margin: 0;
+  color: var(--neutral-900);
+}
+
+.product-info small {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--neutral-500);
+}
+
+.product-info p.product-desc {
+  font-size: 15px;
+  margin: 20px 0 10px 0;
+  color: var(--neutral-700);
+}
+
+.product-tag {
+  padding: 4px 12px;
+  background-color: var(--primary-150);
+  color: var(--primary-600);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.product-info__control > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-top: 20px;
+}
+
+.product-info__control p {
+  font-size: 15px;
+  color: var(--neutral-900);
+  font-weight: 600;
+}
+
+.product-img__controls .product-img__indicators {
+  width: 50px;
+  height: 50px;
+}
+
+.product-img__controls .product-img__indicators img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid var(--neutral-500);
+}
+
+.product-button {
+  padding: 0 12px;
+}
+
+.product-button button {
+  height: 50px;
+  outline: 0;
+  border: 0;
+  background-color: var(--primary-600);
+  color: white;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.product-button button:hover {
+  opacity: 1;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--neutral-300);
+  margin: 60px 0;
+  position: relative;
+}
+
+.divider-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--info-500);
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  box-shadow: var(--shadow-m);
+}
+
+.review {
+  width: 48%;
+  padding: 12px;
+  box-shadow: var(--shadow-s);
+  border-radius: var(--radius-s);
+  display: flex;
+  gap: 12px;
+}
+
+.review-author {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.review-author img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.review .author-name {
+  font-weight: 700;
+}
+
+.review .author-name span {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--neutral-500);
+  margin-left: 4px;
+}
+
+.review .review-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.review .review-desc {
+  color: var(--neutral-600);
+  margin-bottom: 8px;
+}
+
+.review-controls > div {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.review-controls i {
+  color: var(--neutral-600);
+}

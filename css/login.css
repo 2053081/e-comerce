@@ -1,0 +1,134 @@
+/* Central Image */
+body {
+  overflow: hidden;
+}
+
+.imageContainer {
+}
+
+.imageContainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.loginContainer {
+  padding: 40px;
+}
+
+form#login-form {
+  padding: 20px;
+}
+
+h1 {
+  font-family: Epilogue; /* Heading */
+  font-size: 3vw;
+  font-weight: bold;
+  line-height: 3vw;
+  color: #171a1fff; /* neutral-900 */
+}
+
+/* Textbox 1 */
+.textbox {
+  width: 100%;
+}
+.textbox input {
+  width: 100%;
+  height: 52px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Inter; /* Body */
+  font-size: 18px;
+  background: #ffffffff; /* white */
+  border-radius: 4px; /* border-m */
+  border-width: 1px;
+  border-color: #9095a0ff; /* neutral-500 */
+  outline: none;
+}
+.textbox label {
+  font-size: 25px;
+  line-height: 28px;
+  font-weight: bold;
+}
+/* focused */
+.textbox input:focused {
+  color: #bcc1caff; /* neutral-400 */
+  background: #ffffffff; /* white */
+  border-color: #9095a0ff; /* neutral-500 */
+}
+/* disabled */
+.textbox input:disabled {
+  color: #bcc1caff; /* neutral-400 */
+  background: #ffffffff; /* white */
+  border-color: #9095a0ff; /* neutral-500 */
+}
+.textbox :disabled + .icon,
+.textbox :disabled + .icon + .icon {
+  fill: #171a1fff; /* neutral-900 */
+}
+
+/* focused */
+.textbox input:focused {
+  color: #bcc1caff; /* neutral-400 */
+  background: #ffffffff; /* white */
+  border-color: #9095a0ff; /* neutral-500 */
+}
+/* disabled */
+.textbox input:disabled {
+  color: #bcc1caff; /* neutral-400 */
+  background: #ffffffff; /* white */
+  border-color: #9095a0ff; /* neutral-500 */
+}
+.textbox :disabled + .icon,
+.textbox :disabled + .icon + .icon {
+  fill: #171a1fff; /* neutral-900 */
+}
+
+/* Button 1 */
+.button {
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter; /* Body */
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffffff; /* white */
+  background: #00bdd6ff; /* primary-500 */
+  opacity: 1;
+  border: none;
+  border-radius: 8px; /* border-xl */
+}
+/* Hover */
+.button:hover {
+  color: #ffffffff; /* white */
+  background: #00a9c0ff; /* primary-550 */
+}
+/* Pressed */
+.button:hover:active {
+  color: #ffffffff; /* white */
+  background: #0095a9ff; /* primary-600 */
+}
+/* Disabled */
+.button:disabled {
+  opacity: 0.4;
+}
+
+/* Button 2 */
+.button:last-child {
+  background: #335ca6ff;
+}
+
+/* Text 2 */
+.accountManagment {
+  font-family: Inter; /* Body */
+  font-size: 24px;
+  line-height: 36px;
+  color: #171a1fff; /* neutral-900 */
+}
+
+.accountManagment p {
+  text-align: center;
+}
